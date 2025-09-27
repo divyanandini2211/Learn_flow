@@ -1,77 +1,204 @@
-#  Your AI Study Assistant
+ DocuMentor – Your AI Study Assistant
 
-A multi-agent AI application that blends deep document analysis with practical career skills, designed to be the ultimate study partner for college students. Powered by LangGraph, Google Gemini, and Qdrant.
+A multi-agent AI application that blends deep document analysis with practical career skills, designed to be the ultimate study partner for college students. Powered by LangGraph, Google Gemini, and Qdrant, DocuMentor is your companion for smarter revision, skill-building, and academic success.
 
----
+ Project Vision
 
-## ✨ Project Vision
+Traditional study tools are often one-dimensional, focusing only on content recall.
+DocuMentor is built on the belief that students need a holistic AI assistant that supports both:
 
-Standard study tools are often one-dimensional. DocuMentor is built on the idea that students need a holistic assistant that helps with both **academic revision** and **career-focused micro-learning**. This application combines a powerful RAG (Retrieval-Augmented Generation) chatbot for course notes with a suite of standalone AI agents for other essential tasks.
+Academic Learning – Through document-based RAG-powered conversations
 
-## 🚀 Core Features
+Career Readiness – With AI-generated micro-skills and practice tools
 
-*   **🧠 Conversational RAG Agent:** Upload any PDF (lecture notes, research papers, textbooks) and have a deep, context-aware conversation. The agent remembers your chat history and uses a sophisticated LangGraph-powered workflow to decide whether to use the PDF's knowledge or its own.
-*   **💡 Dynamic Skill Agent:** Get a unique, AI-generated micro-skill on demand. The agent is trained to provide relevant, college-level tips across three categories: Tech, Aptitude, and Soft Skills.
-*   **📅 AI-Powered Study Planner:** Input your study duration and subjects, and the Planner Agent will generate a detailed, day-by-day revision schedule in a clean markdown table.
-*   **📝 Interactive Quiz Agent:** Generate a 5-question multiple-choice quiz on any topic, either from a general knowledge base or based specifically on the content of your uploaded PDF.
+By combining course revision, study planning, skill development, and interactive quizzes, DocuMentor transforms the way students prepare for exams and placements.
 
-## 🛠️ Tech Stack & Architecture
+ Core Features
+ Conversational RAG Agent
 
-This project uses a modern, modular architecture with a separate backend and frontend.
+Upload any PDF (lecture notes, research papers, textbooks).
 
-*   **Backend:** FastAPI, LangGraph, LangChain
-*   **Frontend:** Streamlit
-*   **AI & ML:** Google Gemini 1.5 Flash, Google Embeddings
-*   **Database:** Qdrant Cloud (Vector Store)
+Ask deep, context-aware questions and receive precise answers.
 
-## ⚙️ Getting Started
+Conversation memory ensures continuity across sessions.
 
-Follow these instructions to set up and run the project locally.
+Powered by a LangGraph workflow to decide when to use PDF knowledge vs general AI knowledge.
 
-### Prerequisites
+ Dynamic Skill Agent
 
-*   Python 3.9+
-*   Git
-*   A [Qdrant Cloud](https://cloud.qdrant.io/) account
-*   A [Google AI Studio](https://aistudio.google.com/) API Key
+Get AI-generated micro-skills on demand.
 
-### Installation & Setup
+Three categories: Tech Skills, Aptitude, and Soft Skills.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
-    ```
+Perfect for career prep and building well-rounded knowledge.
 
-2.  **Backend Setup:**
-    *   Navigate to the backend directory: `cd backend`
-    *   Create a `.env` file and add your keys (no quotes):
-        ```env
-        GOOGLE_API_KEY=your_google_api_key
-        QDRANT_URL=your_qdrant_cloud_url
-        QDRANT_API_KEY=your_qdrant_api_key
-        ```
-    *   Create and activate a Python virtual environment:
-        ```bash
-        python -m venv venv
-        # Windows: venv\Scripts\activate
-        # macOS/Linux: source venv/bin/activate
-        ```
-    *   Install libraries: `pip install -r requirements.txt`
+ AI-Powered Study Planner
 
-3.  **Frontend Setup:**
-    *   Navigate to the frontend directory: `cd ../frontend`
-    *   Create and activate a separate virtual environment.
-    *   Install libraries: `pip install -r requirements.txt`
+Input your study duration & subjects.
 
-### Running the Application
+Generate a day-by-day revision plan in a clean markdown table.
 
-1.  **Start the Backend (in Terminal 1, from the `backend` folder):**
-    ```bash
-    uvicorn backend:app --reload
-    ```
-2.  **Start the Frontend (in Terminal 2, from the `frontend` folder):**
-    ```bash
-    streamlit run main.py
-    ```
-    Open your browser to `http://localhost:8501`.
+Tailored to your schedule and priorities.
+
+ Interactive Quiz Agent
+
+Instantly create 5-question MCQs on any topic.
+
+Quiz can be based on general knowledge or your uploaded PDF content.
+
+Great for self-testing and memory retention.
+
+ Tech Stack & Architecture
+
+Backend:
+
+FastAPI (API framework)
+
+LangGraph + LangChain (multi-agent orchestration)
+
+Frontend:
+
+Streamlit (lightweight, interactive UI)
+
+AI & ML:
+
+Google Gemini 1.5 Flash
+
+Google Embeddings
+
+Database:
+
+Qdrant Cloud (vector store for PDF context retrieval)
+
+📂 Project Structure
+DocuMentor/
+├── backend/                 # FastAPI + LangGraph backend
+│   ├── backend.py           # Main FastAPI application
+│   ├── agents/              # AI agents (RAG, Quiz, Planner, Skills)
+│   └── requirements.txt     # Backend dependencies
+├── frontend/                # Streamlit frontend
+│   ├── main.py              # UI entry point
+│   └── requirements.txt     # Frontend dependencies
+├── .env.example             # Example environment variables
+└── README.md                # Project documentation
+
+ Getting Started
+ Prerequisites
+
+Python 3.9+
+
+Git
+
+A Qdrant Cloud
+ account
+
+A Google AI Studio
+ API key
+
+ Installation & Setup
+
+Clone the repository
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+
+Backend Setup
+
+cd backend
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+pip install -r requirements.txt
+
+
+Create a .env file inside backend/ and add:
+
+GOOGLE_API_KEY=your_google_api_key
+QDRANT_URL=your_qdrant_cloud_url
+QDRANT_API_KEY=your_qdrant_api_key
+
+
+Frontend Setup
+
+cd ../frontend
+python -m venv venv
+source venv/bin/activate   # (or venv\Scripts\activate on Windows)
+pip install -r requirements.txt
+
+ Running the Application
+
+Start Backend (Terminal 1 – inside backend/):
+
+uvicorn backend:app --reload
+
+
+Start Frontend (Terminal 2 – inside frontend/):
+
+streamlit run main.py
+
+
+Access in Browser:
+
+Frontend: http://localhost:8501
+
+Backend API: http://localhost:8000
+
+ Usage Examples
+
+Academic Assistance
+
+Upload lecture notes → “Explain this theorem step by step.”
+
+“Summarize Chapter 3 in 5 key points.”
+
+Skill Development
+
+“Give me an aptitude tip.”
+
+“Suggest a soft skill for interviews.”
+
+Study Planning
+
+“Plan a 7-day schedule for OS and DSA.”
+
+Interactive Quiz
+
+“Generate 5 MCQs from this PDF.”
+
+“Quiz me on probability.”
+
+ Design Philosophy
+
+Student-Centric: Tailored for college students preparing for exams & placements.
+
+Multi-Agent Intelligence: Each agent specializes in a unique task.
+
+Simplicity First: Minimalist frontend for fast, distraction-free usage.
+
+Scalability: Modular architecture for adding more agents in the future.
+
+ Future Enhancements
+
+ Progress Tracker – Monitor study progress & weak areas
+
+ Placement Prep Toolkit – Resume feedback, mock interviews, GD practice
+
+ Video Integration – Explanations & micro-lectures
+
+ Mobile App – Cross-platform availability
+
+ Collaboration – Study groups & shared plans
+
+ Contributors
+
+Your Name Here – Project Owner & Developer
+
+ License
+
+This project is developed as part of an academic assignment.
+All rights reserved.
+
+ DocuMentor – Smarter study, stronger future.
