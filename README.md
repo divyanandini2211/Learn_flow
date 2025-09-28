@@ -28,12 +28,7 @@ By combining course revision, study planning, skill development, and interactive
 
 ### Wikipedia Search Tool
 *   Ask factual questions using keywords like "wiki" to get comprehensive summaries directly from Wikipedia, complete with source citations.
-
-<!-- 
-    ↓↓↓ 3. SCREENSHOT FOR WIKIPEDIA SEARCH GOES HERE ↓↓↓ 
--->
-![Screenshot of Wikipedia Search](https://via.placeholder.com/600x350.png?text=Screenshot+of+Wikipedia+Search+Here)
-
+<img width="1355" height="481" alt="image" src="https://github.com/user-attachments/assets/bbcfd50a-d185-4df8-a5f7-644fa3175720" />
 
 ### Dynamic Skill Agent
 *   Get AI-generated micro-skills on demand.
