@@ -4,7 +4,7 @@ A multi-agent AI application that blends deep document analysis with practical c
 
 <img width="1880" height="868" alt="image" src="https://github.com/user-attachments/assets/6f1ec876-b5d5-42db-b5b8-3de7731d842c" />
 
-![Learn Flow UI](<img width="1880" height="868" alt="image" src="https://github.com/user-attachments/assets/6f1ec876-b5d5-42db-b5b8-3de7731d842c" />)
+
 
 
 ## Project Vision
@@ -23,11 +23,7 @@ By combining course revision, study planning, skill development, and interactive
 *   Upload any PDF (lecture notes, research papers, textbooks).
 *   Ask deep, context-aware questions and receive precise answers.
 
-<!-- 
-    ↓↓↓ 2. SCREENSHOT FOR PDF CHAT GOES HERE ↓↓↓ 
--->
-![Screenshot of PDF Chat](<img width="1842" height="737" alt="image" src="https://github.com/user-attachments/assets/b481458d-66e4-491b-a73b-527ea79430ae" />
-)
+  <img width="1842" height="737" alt="image" src="https://github.com/user-attachments/assets/b481458d-66e4-491b-a73b-527ea79430ae" />
 
 
 ### Wikipedia Search Tool
@@ -43,33 +39,21 @@ By combining course revision, study planning, skill development, and interactive
 *   Get AI-generated micro-skills on demand.
 *   Three categories: Tech Skills, Aptitude, and Soft Skills.
 
-<!-- 
-    ↓↓↓ 4. SCREENSHOT FOR SKILL AGENT GOES HERE ↓↓↓ 
--->
-![Screenshot of Skill Agent](<img width="1517" height="718" alt="image" src="https://github.com/user-attachments/assets/46a32793-a886-4b75-9dd9-528905d4818b" />
-)
+<img width="1517" height="718" alt="image" src="https://github.com/user-attachments/assets/46a32793-a886-4b75-9dd9-528905d4818b" />
 
 
 ### AI-Powered Study Planner
 *   Input your study duration & subjects.
 *   Generate a day-by-day revision plan in a clean markdown table.
 
-<!-- 
-    ↓↓↓ 5. SCREENSHOT FOR STUDY PLANNER GOES HERE ↓↓↓ 
--->
-![Screenshot of Study Planner](<img width="1836" height="799" alt="image" src="https://github.com/user-attachments/assets/5f4ad1bb-7fef-4129-bd29-b22daef60ebe" />
-)
+<img width="1836" height="799" alt="image" src="https://github.com/user-attachments/assets/5f4ad1bb-7fef-4129-bd29-b22daef60ebe" />
 
 
 ### Interactive Quiz Agent
 *   Instantly create 5-question MCQs on any topic.
 *   Quiz can be based on general knowledge or your uploaded PDF content.
 
-<!-- 
-    ↓↓↓ 6. SCREENSHOT FOR QUIZ AGENT GOES HERE ↓↓↓ 
--->
-![Screenshot of Quiz Agent](<img width="1785" height="881" alt="image" src="https://github.com/user-attachments/assets/b1edc75f-dec2-4232-9340-a971157351a4" />
-)
+<img width="1785" height="881" alt="image" src="https://github.com/user-attachments/assets/b1edc75f-dec2-4232-9340-a971157351a4" />
 
 
 ## Tech Stack & Architecture
