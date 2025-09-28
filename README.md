@@ -160,7 +160,7 @@ Learn_flow/
 - [ ] **Mobile App** – Cross-platform availability
 - [ ] **Collaboration** – Study groups & shared plans
 
-## Contributors
+## TeamMates
 
 *   Divya Nandini- 23N217
 *   Pranika - 23N236
