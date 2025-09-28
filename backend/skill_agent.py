@@ -12,7 +12,7 @@ load_dotenv()
 router = APIRouter()
 
 # The cache=False flag is good practice, so we'll keep it.
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.9, cache=False)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.9, cache=False)
 
 # Pydantic Model for the response
 class SkillResponse(BaseModel):

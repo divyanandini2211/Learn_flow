@@ -15,7 +15,7 @@ from langchain_core.output_parsers import PydanticOutputParser
 
 load_dotenv()
 router = APIRouter()
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.5) # Lower temp for more factual quizzes
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.5) # Lower temp for more factual quizzes
 
 # --- Pydantic Models for a perfectly structured quiz ---
 class QuizQuestion(BaseModel):

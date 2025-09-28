@@ -15,7 +15,7 @@ load_dotenv()
 router = APIRouter()
 
 # Initialize the LLM specifically for this agent's tasks
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.3)  # Lower temperature for more consistent formatting
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.3)  # Lower temperature for more consistent formatting
 
 # --- Pydantic Model for incoming plan requests ---
 class PlanRequest(BaseModel):

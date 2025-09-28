@@ -6,9 +6,8 @@ import time # Used for the cache-busting fix
 BACKEND_URL = "http://127.0.0.1:8000"
 
 # --- Page Setup ---
-st.set_page_config(page_title="DocuMentor", page_icon="📚", layout="wide")
-st.title("📚 DocuMentor: Your AI Study Assistant")
-st.write("Upload a PDF to start a chat, or use one of the agents to kickstart your learning!")
+st.set_page_config(page_title="Learn Flow", page_icon="📚", layout="wide")
+st.title("Learn Flow: Your AI Study Assistant")
 
 # --- Session State Initialization ---
 # This ensures all our variables are ready when the app starts
@@ -33,7 +32,7 @@ def fetch_skill(category):
         if response.status_code == 200:
             skill_data = response.json()
             st.session_state.messages.append({"role": "user", "content": f"Give me a {category} skill."})
-            content = (f"**Here's your {category} tip from the '{skill_data['category_type']}' category:**\n\n### {skill_data['title']}\n\n{skill_data['content']}")
+            content = (f"*Here's your {category} tip from the '{skill_data['category_type']}' category:*\n\n### {skill_data['title']}\n\n{skill_data['content']}")
             st.session_state.messages.append({"role": "assistant", "content": content})
         else:
             st.error(f"Could not retrieve skill: {response.text}")
@@ -51,7 +50,7 @@ with st.sidebar:
                 try:
                     response = requests.post(f"{BACKEND_URL}/upload-pdf", files=files)
                     if response.status_code == 200:
-                        st.session_state.messages = [{"role": "assistant", "content": f"Hi! I'm ready to answer questions about `{uploaded_file.name}`."}]
+                        st.session_state.messages = [{"role": "assistant", "content": f"Hi! I'm ready to answer questions about {uploaded_file.name}."}]
                         st.session_state.study_plan = None; st.session_state.quiz_data = None
                         st.session_state.pdf_processed = True
                         st.success("PDF processed!")
@@ -128,12 +127,12 @@ elif st.session_state.quiz_data:
             for i, q in enumerate(st.session_state.quiz_data["questions"]):
                 user_ans = st.session_state.user_answers.get(i, "Not answered")
                 correct_ans = q['correct_answer']
-                st.write(f"**Question {i+1}: {q['question_text']}**")
+                st.write(f"*Question {i+1}: {q['question_text']}*")
                 if user_ans == correct_ans:
-                    st.write(f"✔️ Your answer: **{user_ans}** (Correct!)")
+                    st.write(f"✔ Your answer: *{user_ans}* (Correct!)")
                 else:
-                    st.write(f"❌ Your answer: **{user_ans}**")
-                    st.write(f"➡️ Correct answer: **{correct_ans}**")
+                    st.write(f"❌ Your answer: *{user_ans}*")
+                    st.write(f"➡ Correct answer: *{correct_ans}*")
         
         if st.button("Take Another Quiz or Chat"):
             st.session_state.quiz_data = None; st.rerun()
@@ -144,10 +143,10 @@ else:
     if not st.session_state.messages:
         st.info("Start by getting a skill, uploading a PDF, or using an agent from the sidebar!")
         cols = st.columns(3);
-        if cols[0].button("🧠 Get Tech Skill", use_container_width=True): fetch_skill("Tech"); st.rerun()
-        if cols[1].button("📈 Get Aptitude Skill", use_container_width=True): fetch_skill("Aptitude"); st.rerun()
-        if cols[2].button("🤝 Get Soft Skill", use_container_width=True): fetch_skill("Soft Skills"); st.rerun()
-    if prompt := st.chat_input("What would you like to know?"):
+        if cols[0].button(" Get Tech Skill", use_container_width=True): fetch_skill("Tech"); st.rerun()
+        if cols[1].button(" Get Aptitude Skill", use_container_width=True): fetch_skill("Aptitude"); st.rerun()
+        if cols[2].button(" Get Soft Skill", use_container_width=True): fetch_skill("Soft Skills"); st.rerun()
+    if prompt := st.chat_input("start typing your question here..."):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"): st.markdown(prompt)
         chat_history = []
